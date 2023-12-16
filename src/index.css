@@ -1,0 +1,270 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  background-color: hsl(0, 0%, 100%);
+  box-sizing: border-box;
+}
+
+html, body {
+ height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.bg-main {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.bg-main img {
+  width: 100%;
+}
+
+.form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-label {
+  color: hsl(278, 68%, 11%);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.input {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  color: hsl(278, 68%, 11%);
+}
+
+.input::placeholder {
+  color: hsl(270, 3%, 87%);
+  opacity: 1;
+  /* Firefox */
+}
+
+.input::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: hsl(270, 3%, 87%);
+}
+
+.button {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.button:disabled {
+  transition: background-color 1s ease;
+  animation: shake 0.5s ease;
+  background-color: hsl(0, 100%, 66%);
+}
+
+.card-back {
+  background-image: url("assets/images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+
+  
+  width: 270px;
+  height: 156px;
+  box-sizing: border-box;
+  
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.card-back p {
+  position: absolute;
+  top: 57px;
+  right: 18px;
+
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+}
+
+.card-front {
+  background-image: url("assets/images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -90px;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 270px;
+  height: 156px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card-logo {
+  width: 45px !important;
+  height: 26px !important;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-numbers {
+  text-align: center;
+  font-size: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+.card-name {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1rem;
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1px;
+}
+
+.date_cvc-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.flex-box {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.date-input {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.cvc-container {
+  flex: 2;
+}
+
+.last-input {
+  width: 100%;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+.error-msg {
+  margin: 0;
+  padding: 1px;
+  font-size: 10px;
+  color: hsl(0, 100%, 66%);
+  animation: fadeInOut 1s ease, shake 0.5s ease;
+}
+
+.error-input {
+  border: 1px solid hsl(0, 100%, 66%);
+  color: hsl(0, 100%, 66%);
+  transition: border-color 1s ease;
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.success-container h2 {
+  color: hsl(278, 68%, 11%);
+  letter-spacing: 2px;
+}
+
+.success-container P {
+  color: hsl(0, 0%, 56%);
+}
+
+/* HELPERS */
+.relative {
+  position: relative;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+
+/* LG-DEVICES */
+@media (min-width: 1200px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
