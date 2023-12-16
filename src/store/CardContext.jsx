@@ -17,7 +17,6 @@ export const CardContext = createContext({
   setCardNumber: () => {},
   setHolderName: () => {},
   setExpDate: () => {},
-  setExpDate: () => {},
   setCvc: () => {},
   setError: () => {},
   setSuccess: () => {},

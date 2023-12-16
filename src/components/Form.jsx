@@ -79,7 +79,7 @@ function Form() {
     const fieldId = e.target.id;
     switch (fieldId) {
       case "holderName":
-        if (!/^[a-zA-Z\s]*$/.test(e.target.value)) {
+        if (!/^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]*$/.test(e.target.value)) {
           setError((prev) => {
             const existingError = prev.find(
               (error) => error.fieldId === e.target.id

@@ -10,8 +10,9 @@ body {
   box-sizing: border-box;
 }
 
-html, body {
- height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 #root {
@@ -78,6 +79,13 @@ html, body {
   color: hsl(270, 3%, 87%);
 }
 
+.input:focus {
+  border: 2px solid;
+  border-color: linear-gradient(249deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+  outline: none;
+  transition: border-color 0.5s ease;
+}
+
 .button {
   padding: 1rem;
   width: 100%;
@@ -101,11 +109,11 @@ html, body {
   background-size: cover;
   border-radius: 8px;
 
-  
+
   width: 270px;
   height: 156px;
   box-sizing: border-box;
-  
+
   position: absolute;
   bottom: 0;
   right: 20px;
@@ -154,6 +162,7 @@ html, body {
   text-align: center;
   font-size: 20px;
   color: hsl(0, 0%, 100%);
+  letter-spacing: 0.5px;
 }
 
 .card-name {
@@ -202,18 +211,24 @@ html, body {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 @keyframes shake {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
-  25%, 75% {
+
+  25%,
+  75% {
     transform: translateX(10px);
   }
+
   50% {
     transform: translateX(-10px);
   }
@@ -232,7 +247,7 @@ html, body {
   color: hsl(0, 100%, 66%);
   transition: border-color 1s ease;
 }
-
+ 
 .success-container {
   display: flex;
   flex-direction: column;
@@ -261,10 +276,68 @@ html, body {
   display: none;
 }
 
+.mobile-block {
+  display: block;
+}
+
 
 /* LG-DEVICES */
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .desktop-hidden {
     display: none;
+  }
+
+  .desktop-block {
+    display: block;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7rem;
+  }
+
+  .form {
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    padding: 0;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .bg-main img {
+    min-height: 100vh;
+    width: 90%;
+  }
+
+  .card-front {
+    height: 160px;
+    width: 300px;
+    top: -110px;
+    left: -380px;
+    gap: 1.5rem;
+  }
+
+  .card-numbers {
+    letter-spacing: 2px;
+  }
+
+  .card-back {
+    height: 160px;
+    width: 300px;
+    top: 80px;
+    left: -280px;
+    gap: 1.5rem;
+  }
+
+  .card-back p {
+    top: 60px;
+    right: 35px;
   }
 }
