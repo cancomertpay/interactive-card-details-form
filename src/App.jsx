@@ -3,7 +3,7 @@ import Form from "./components/Form";
 import GradientImg from "./components/GradientImg";
 import CreditCards from "./components/CreditCards";
 import { CardContext } from "./store/CardContext";
-import Success from "./components/success";
+import Success from "./components/Success";
 
 function App() {
   const { success } = useContext(CardContext);
