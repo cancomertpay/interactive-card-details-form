@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import successImg from "../assets/images/icon-complete.svg"
-import Button from "./UI/Button.jsx"
-import { CardContext } from '../store/CardContext.jsx'
+import React, { useContext } from "react";
+import successImg from "../assets/images/icon-complete.svg";
+import Button from "./UI/Button.jsx";
+import { CardContext } from "../store/CardContext.jsx";
 
 function Success() {
-  const {setSuccess} = useContext(CardContext);
+  const { setSuccess } = useContext(CardContext);
 
   return (
-    <div className='success-container'>
+    <div className="success-container">
       <div>
         <img src={successImg} alt="complete-icon" />
       </div>
@@ -17,7 +17,7 @@ function Success() {
       </div>
       <Button onClick={() => setSuccess(false)}>Continue</Button>
     </div>
-  )
+  );
 }
 
-export default Success
+export default Success;
